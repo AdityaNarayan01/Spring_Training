@@ -1,0 +1,48 @@
+package com.example.demo.exceptions;
+
+import java.time.LocalDateTime;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class errorDetails {
+
+	String Message;
+	int statusCode;
+	LocalDateTime datetime;
+	public errorDetails(String message, int statusCode, LocalDateTime datetime) {
+		super();
+		Message = message;
+		this.statusCode = statusCode;
+		this.datetime = datetime;
+	}
+	@Override
+	public String toString() {
+		return "errorDetails [Message=" + Message + ", statusCode=" + statusCode + ", datetime=" + datetime + "]";
+	}
+	public String getMessage() {
+		return Message;
+	}
+	public void setMessage(String message) {
+		Message = message;
+	}
+	public int getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+	public LocalDateTime getDatetime() {
+		return datetime;
+	}
+	public void setDatetime(LocalDateTime datetime) {
+		this.datetime = datetime;
+	}
+	
+	
+	
+}
